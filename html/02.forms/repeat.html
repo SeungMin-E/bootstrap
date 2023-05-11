@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+  	<div class="mb-3">
+  		<form autocomplete="off">
+  			<label for="exampleFormControlInput1" class="form-label">이름</label>
+  			<input  type="text" id="ina" class="form-control" placeholder="이름">
+  			<label for="exampleFormControlInput1" class="form-label">아이디</label>
+  			<input  type="text" id="ida" class="form-control" placeholder="아이디">
+  			<label for="exampleFormControlInput1" class="form-label">비밀번호</label>
+  			<input  type="password" id="ipw" class="form-control" placeholder="비밀번호">
+  			<label for="exampleFormControlInput1" class="form-label">이메일</label>
+  			<input  type="email"  id="ima" class="form-control" placeholder="이메일">
+  			<label for="exampleFormControlInput1" class="form-label">전화번호</label>
+  			<input  type="tel" id="iph" class="form-control" placeholder="집전화 없으면 휴대폰 번호라도">
+  			<label for="exampleFormControlInput1" class="form-label">날짜</label>
+  			<input  type="date" id="idate" class="form-control">
+  			<label for="exampleFormControlInput1" class="form-label">월</label>
+  			<input  type="month" id="imon" class="form-control">
+  			<label for="exampleFormControlInput1" class="form-label">시간</label>
+  			<input  type="time" id="iti" class="form-control">
+  			<label for="exampleFormControlInput1" class="form-label">색상</label>
+  			<input  type="color" id="ico" class="form-control" >
+  		</form>
+  		<button type="button" id="idiot" class="btn btn-primary">?</button>
+  	</div>
+  	
+  	<div class="mb-2">
+  		<label for="exampleFormControlInput1" class="form-label">기존 비밀번호</label>
+		<input  type="password" id="play" class="form-control">
+  		<label for="exampleFormControlInput1" class="form-label">새 비밀번호</label>
+		<input  type="password" id="el_clear" class="form-control">
+  		<label for="exampleFormControlInput1" class="form-label">새 비밀번호 확인</label>
+		<input  type="password" id="el_fail" class="form-control">
+		<button type="button" id="change" class="btn btn-danger">change</button>
+  	</div>
+  	
+  	<div class="mb-1">
+  		<select class="form-select" aria-label="Default select example" id=conuntry>
+		  <option selected>Open this select menu</option>
+		  <option value="1">korea</option>
+		  <option value="2">usa</option>
+		  <option value="3">japan</option>
+		  <option value="4">china</option>
+		</select>
+		<button type="button" id="doIt" class="btn btn-danger">start</button>
+  	</div>
+  		
+  	  	
+  	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	$("#idiot").on("click",function(){
+    		alert("이름 : " + $("#ina").val());
+    		alert("아이디 : " + $("#ida").val());
+    		alert("암호 : " + $("#ipw").val());
+    		alert("이메일 : " + $("#ima").val());
+    		alert("연락처 : " + $("#iph").val());
+    		alert("날짜 : " + $("#idate").val());
+    		alert("월 : " + $("#imon").val());
+    		alert("시간 : " + $("#iti").val());
+    		alert("색상 : " + $("#ico").val());
+    	});
+    	
+    	$("#change").on("click", function(){
+    		var oldPw = $("#play").val();
+    		var nPw = $("#el_clear").val();
+    		var cNPw = $("#el_fail").val();
+    		
+    		if(oldPw == null || oldPw == "" || nPw  == null || nPw  == "" || cNPw == null || cNPw == "" ) {
+    			alert("비밀번호를 입력하세여");
+    			$("#play").focus();
+    		}else if( oldPw == nPw ){
+    			alert("기존 비밀번호랑 일치함");
+    			$("#el_clear").focus();
+    		}else if( nPw == cNPw){
+    			alert("변경완료?");
+    		}else{
+    			alert("비밀번호가 틀리다 다시확인해");
+    			$("#el_fail").focus();
+    		}
+    	});
+    	
+    	$("#conuntry").on("change", function(){
+    		alert("선택 : " + $("#conuntry").val());
+    		$("#conuntry").val("4").prop("select", true);
+    		alert("선택 : " + $("#conuntry").val());
+    	});
+    	
+    	$("#doIt").on("click", function(){
+    		alert($("#conuntry").val());
+    	});
+    </script>
+  </body>
+</html>

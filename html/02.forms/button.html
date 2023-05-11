@@ -17,7 +17,7 @@
    	
    	<div class="mb-3">
    		<input type="text" id="id" class="form-control" placeholder="아이디">
-   		
+   		<input type="text" id="name01" class="form-control"  placeholder="성함">
    		<input type="password" id="pw" class="form-control" placeholder="비밀번호">
    		<input type="email" id="em" class="form-control" placeholder="메일">
    		<input type="date" id="dDay" class="form-control">
@@ -25,6 +25,7 @@
    		<input type="time" id="wtin" class="form-control">
    		<input type="tel" id="callnum" class="form-control">
    		<input type="week" id="whatWeek" class="form-control">
+   		<input type="color" id="co" class="form-control">
    		
    		<button type="button" id="nihill" class="btn btn-danger">click</button>
    		
@@ -43,12 +44,25 @@
     	$("#nihill").on("click",function(){
     		alert("아이디 : " + $("#id").val());
     		alert("비밀번호 : " + $("#pw").val());
+    		alert("이름 : " + $("#name01").val());
     		alert("이메일 : " + $("#em").val());
     		alert("오늘 : " + $("#dDay").val());
     		alert("이번달 : " + $("#mon").val());
     		alert("시간 : " + $("#wtin").val());
     		alert("번호 : " + $("#callnum").val());
     		alert("이번주 : " + $("#whatWeek").val());
+    		alert("색상 : " + $("#co").val());
+    		
+    		console.log("아이디 : " + $("#id").val());
+    		console.log("비밀번호 : " + $("#pw").val());
+    		console.log("이름 : " + $("#name01").val());
+    		console.log("이메일 : " + $("#em").val());
+    		console.log("오늘 : " + $("#dDay").val());
+    		console.log("이번달 : " + $("#mon").val());
+    		console.log("시간 : " + $("#wtin").val());
+    		console.log("번호 : " + $("#callnum").val());
+    		console.log("이번주 : " + $("#whatWeek").val());
+    		console.log("색상 : " + $("#co").val());
     	});
     	
     	
