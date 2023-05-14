@@ -1,0 +1,3 @@
+mysql 다운로드
+1. MySQL Community Downloads -> workbench-comunity-8.0.33-winx64.msi 다운
+2. 다운받다가 VC레지스트리가 없으면 https://learn.microsoft.com/ko-KR/cpp/windows/latest-supported-vc-redist?view=msvc-170 가서 VC최신판 다운
