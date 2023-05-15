@@ -8,51 +8,197 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
+  	<div class="mb-3">
+	  <label for="exampleFormControlInput1" class="form-label">이름</label>
+	  <input type="text" class="form-control" id="named" placeholder="이름를 쓰세요 ex : 홍길동">
+	</div>
+	<div class="mb-3">
+	<button type="button" id="meme1" class="btn btn-danger">제이쿼리 완료</button>
+	<button type="button" id="meme2" class="btn btn-danger">자바 스크립트 완료</button>
+	</div>
+  
+  	<p>사시는 곳이 어디십니까? (자세하게 말고 지역만 알려주시면 됩니다.)</p>
+  	<select class="form-select" aria-label="Default select example" id="area">
+	  <option selected >선택해주세요</option>
+	  <option value="0">서울</option>
+	  <option value="1">인천</option>
+	  <option value="2">대전</option>
+	  <option value="3">부산</option>
+	  <option value="4">경기도</option>
+	  <option value="5">강원도</option>
+	  <option value="6">충청도</option>
+	  <option value="7">전라도</option>
+	  <option value="8">경상도</option>
+	  <option value="9">제주도</option>
+	  <option value="10">울릉도</option>
+	  <option value="11">독도</option>
+	  <option value="12">요단강</option>
+	</select>
+	  
   	<p>너의 성별은?</p>
 	  <div class="form-check">
-	  	<input class="form-check-input" type="checkbox" name="gen" value="man" id="1">
+	  	<input class="form-check-input" type="checkbox" name="gen" value="1" id="man">
 	  	<label class="form-check-label" for="1">
 	    	남자
 	  	</label>
 	</div>
 	<div class="form-check">
-	  <input class="form-check-input" type="checkbox" name="gen" value="woman" id="2" checked>
+	  <input class="form-check-input" type="checkbox" name="gen" value="2" id="woman">
 	  <label class="form-check-label" for="2">
 	    여자
 	  </label>
 	</div>
 	<div class="form-check">
-	  <input class="form-check-input" type="checkbox" name="gen" value="getOut" id="3" disabled>
+	  <input class="form-check-input" type="checkbox" name="gen" value="3" id="getOut" disabled>
 	  <label class="form-check-label" for="3">
 	    기타가 어딨어? get out get out
 	  </label>
 	</div>
-	<button type="button" id="selectOn" class="btn btn-danger">완료</button>
+	<div class="mb-3">
+		<button type="button" id="selectOn" class="btn btn-danger">자바스크립트</button>
+		<button type="button" id="selectOn1" class="btn btn-danger">제이쿼리</button>
+	</div>
 	
 	
+	<p>Continue?</p>
 	<div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Default radio
+  <input class="form-check-input" type="radio" name="YN" id="Y" value="좋아... 잘생각했어">
+  <label class="form-check-label" for="Y">
+   Yes
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-  <label class="form-check-label" for="flexRadioDefault2">
-    Default checked radio
+  <input class="form-check-input" type="radio" name="YN" id="N" value="그동안 함께해서 영광이었다..">
+  <label class="form-check-label" for="N">
+   No
   </label>
+</div>
+<div class = "mb-3">
+	<button type="button" id="igo1" class="btn btn-danger">제이쿼리</button>
+	<button type="button" id="igo2" class="btn btn-danger">자바스크립트</button>
+
 </div>
 	
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script type="text/javascript">
-    	$("#selectOn").on("click",function(){
-    		var gen = new array();
+    
+    	/* input 제이쿼리 */
+     	$("#meme1").on("click", function(){
+    		alert($("#named").val());
+    		$("#named").prop("value","이적");
+    		alert($("#named").val());
+    	});
+    	 
+    	
+    	/* input 자바스크립트 */
+    	
+    	document.getElementById("meme2").addEventListener("click", function(){
+    		alert(document.getElementById("named").value);
+    		document.getElementById("named").value = "유희열";
+    		alert(document.getElementById("named").value);
     		
-    		var gen_length = document.getElementsName("gen").length;
+    	});
+
+    	
+    		/* select 변경 제이쿼리 방식 */
+    	$("#area").on("change", function(){
+  		
+    		alert("사는곳은 : " + $("#area").val() + " 이시군요");
+    		$("#area").val("13").prop("select", true);
+    		alert("이제는 " + $("#area").val() + "로 가시면 됩니다.");
+ 
+    	});
+    	
+    		/* select 자바스크립트 방식 */
+    	document.getElementById("area").onclick = function(){
+        	alert(document.getElementById("area").value);
+    		/* document.getElementById("area").setAttribute("value", "12"); select문은 옵션으로 선택하기에 이거는 틀린 코드이다. */
+    		document.getElementById("area").options[13].selected = true;
+    		alert(document.getElementById("area").value);
+    		
+    	}
+        	
+ 	/* 제크박스 제이쿼리 */
+ 	$("#selectOn1").on("click",function(){
+		var gen_length = new Array();
+		
+		for(i=0; i < $('input:checkbox[name=gen]').length; i++){
+			if($("input:checkbox[name=gen]").eq(i).is(":checked") == true){
+				alert($("input:checkbox[name=gen]").eq(i).val());
+				gen_length.push($("input:checkbox[name=gen]").eq(i).val());
+			}
+		}
+		
+		$("input:checkbox[name=gen]").eq(0).prop("checked",false);
+		$("input:checkbox[name=gen]").eq(1).prop("checked",false);
+		$("input:checkbox[name=gen]").eq(2).prop("checked",true);
+		
+		for(i=0; i < $('input:checkbox[name=gen]').length; i++){
+			if($("input:checkbox[name=gen]").eq(i).is(":checked") == true){
+				alert($("input:checkbox[name=gen]").eq(i).val());
+				gen_length.push($("input:checkbox[name=gen]").eq(i).val());
+			}
+		}
+ 		
+ 	});
+ 		
+    	
+    /* 체크박스 자바스크립트 */
+    	document.getElementById("selectOn").onclick = function(){
+    		var gen = new Array();
+    		
+    		var gen_length = document.getElementsByName("gen").length;
     		
     		for(var i = 0; i < gen_length; i++){
-    			
+    			if(document.getElementsByName("gen")[i].checked == true){
+	    			alert(document.getElementsByName("gen")[i].value);
+					gen.push(document.getElementsByName("gen")[i].value);
+    			}
+    		}
+    		
+   			document.getElementsByName("gen")[0].checked = false;
+   			document.getElementsByName("gen")[1].checked = false;
+   			document.getElementsByName("gen")[2].checked = true;
+   			
+   			for(var i = 0; i < gen_length; i++){
+    			if(document.getElementsByName("gen")[i].checked == true){
+	    			alert(document.getElementsByName("gen")[i].value);
+					gen.push(document.getElementsByName("gen")[i].value);
+    			}
+    		}
+    	};
+    	
+    	/* radio 제이쿼리 */
+    	$("#igo1").on("click", function(){
+    		alert($('input:radio[name=YN]:checked').val());
+			$('input:radio[name=YN]').eq(0).prop("checked",false);    		
+			$('input:radio[name=YN]').eq(1).prop("checked",true);
+			alert($('input:radio[name=YN]:checked').val());
+	        
+    	});
+    	
+    	
+    	
+    	/* radio 자바스크립트 */
+    	document.getElementById("igo2").addEventListener("click",function(){
+    		var YesOrNo = new Array();
+    		
+    		var YesOrNo_length = document.getElementsByName("YN").length;
+    		
+    		for(var i = 0; i <YesOrNo_length; i++){
+    			if(document.getElementsByName("YN")[i].checked == true){
+	    			alert(document.getElementsByName("YN")[i].value);
+	    			YesOrNo.push(document.getElementsByName("YN")[i].value);
+    			}
+    		}
+    		document.getElementById("N").checked = true;
+    		
+    		for(var i = 0; i <YesOrNo_length; i++){
+    			if(document.getElementsByName("YN")[i].checked == true){
+	    			alert(document.getElementsByName("YN")[i].value);
+	    			YesOrNo.push(document.getElementsByName("YN")[i].value);
+    			}
     		}
     	});
     </script>
