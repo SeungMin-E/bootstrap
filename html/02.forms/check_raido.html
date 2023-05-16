@@ -17,8 +17,8 @@
 	<button type="button" id="meme2" class="btn btn-danger">자바 스크립트 완료</button>
 	</div>
   
-  	<p>사시는 곳이 어디십니까? (자세하게 말고 지역만 알려주시면 됩니다.)</p>
-  	<select class="form-select" aria-label="Default select example" id="area">
+  	<p>사시는 곳이 어디십니까? (자바스크립트 문)</p>
+  	<select class="form-select" aria-label="Default select example" id="area1">
 	  <option selected >선택해주세요</option>
 	  <option value="0">서울</option>
 	  <option value="1">인천</option>
@@ -34,6 +34,26 @@
 	  <option value="11">독도</option>
 	  <option value="12">요단강</option>
 	</select>
+	
+	<p>사시는 곳이 어디십니까? (제이쿼리문)</p>
+  	<select class="form-select" aria-label="Default select example" id="area2">
+	  <option selected >선택해주세요</option>
+	  <option value="0">서울</option>
+	  <option value="1">인천</option>
+	  <option value="2">대전</option>
+	  <option value="3">부산</option>
+	  <option value="4">경기도</option>
+	  <option value="5">강원도</option>
+	  <option value="6">충청도</option>
+	  <option value="7">전라도</option>
+	  <option value="8">경상도</option>
+	  <option value="9">제주도</option>
+	  <option value="10">울릉도</option>
+	  <option value="11">독도</option>
+	  <option value="12">요단강</option>
+	</select>
+	
+	
 	  
   	<p>너의 성별은?</p>
 	  <div class="form-check">
@@ -102,20 +122,19 @@
 
     	
     		/* select 변경 제이쿼리 방식 */
-    	$("#area").on("change", function(){
+    	$("#area2").on("change", function(){
   		
-    		alert("사는곳은 : " + $("#area").val() + " 이시군요");
-    		$("#area").val("13").prop("select", true);
-    		alert("이제는 " + $("#area").val() + "로 가시면 됩니다.");
+    		alert("사는곳은 : " + $("#area2").val() + " 이시군요");
+    		$("#area2").val("12").prop("select", true);
+    		alert("이제는 " + $("#area2").val() + "로 가시면 됩니다.");
  
     	});
     	
     		/* select 자바스크립트 방식 */
-    	document.getElementById("area").onclick = function(){
-        	alert(document.getElementById("area").value);
-    		/* document.getElementById("area").setAttribute("value", "12"); select문은 옵션으로 선택하기에 이거는 틀린 코드이다. */
-    		document.getElementById("area").options[13].selected = true;
-    		alert(document.getElementById("area").value);
+    	document.getElementById("area1").onchange = function(){
+        	alert(document.getElementById("area1").value);
+    		document.getElementById("area1").options[13].selected = true;
+    		alert(document.getElementById("area1").value);
     		
     	}
         	
@@ -182,7 +201,16 @@
     	
     	/* radio 자바스크립트 */
     	document.getElementById("igo2").addEventListener("click",function(){
-    		var YesOrNo = new Array();
+    		
+    		alert(document.querySelector("input[name='YN']:checked").value);
+    		document.getElementsByName("YN")[0].checked = false;
+    		document.getElementsByName("YN")[1].checked = true;
+    		alert(document.querySelector("input[name='YN']:checked").value);
+    		
+    		
+    		
+    		
+    		/* var YesOrNo = new Array();
     		
     		var YesOrNo_length = document.getElementsByName("YN").length;
     		
@@ -199,7 +227,7 @@
 	    			alert(document.getElementsByName("YN")[i].value);
 	    			YesOrNo.push(document.getElementsByName("YN")[i].value);
     			}
-    		}
+    		} */
     	});
     </script>
   </body>
