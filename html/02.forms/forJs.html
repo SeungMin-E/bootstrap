@@ -85,11 +85,24 @@
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 	<script type="text/javascript">
+	
+		// text 자바스크립트
 		document.getElementById("nameJavascript").addEventListener("click",function(){
 			alert(document.getElementById("youName").value);
+			document.getElementById("youName").value = "이승민";
+			alert("응 나는 " + document.getElementById("youName").value);
+		});
+		
+		
+		// text 제이쿼리
+		$("#nameJquery").on("click", function(){
+			alert($("#youName").val() + "이구나");
+			$("#youName").prop("value","이승민");
+			alert("응 나는 " + $("#youName").val());
 			
 		});
-	
+		
+		
 	</script>
 </body>
 </html>
