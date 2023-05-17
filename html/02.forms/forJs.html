@@ -20,7 +20,7 @@
 	
 	<div class="container">
 		<div class="mb-3">
-			<select class="form-select" aria-label="Default select example">
+			<select class="form-select" aria-label="Default select example" id="choice">
 			  <option selected>세가지의 선택이 있어.. 골라봐</option>
 			  <option value="1">1번</option>
 			  <option value="2">2번</option>
@@ -103,7 +103,7 @@
 		
 		//select 자바스크립트
 		document.getElementById("selectJavascript").addEventListener("click",function(){
-			
+			alert(document.getElementById("choice").value);
 		});
 		
 
