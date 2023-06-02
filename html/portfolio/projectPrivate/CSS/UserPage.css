@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* 리셋 */
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a {text-decoration: none;}
+
+
+/* 헤드 */
+#head_backg{height: 250px; box-sizing: border-box; background-color: aquamarine;}
+.wrap_container{width: 66%; margin: auto;}
+
+#head_nav_bar{height: 28px; box-sizing: border-box;}
