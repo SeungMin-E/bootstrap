@@ -20,8 +20,12 @@ nav{height: 50px; padding-top: 5px; box-sizing: border-box;}
 /* section */
 section {height: 800px; overflow: auto;}
 #section_content {height: 350px; box-sizing: border-box;}
-#section_content_nav{background-color: aliceblue;}
-#section_content_sec{background-color: aliceblue;}
+#section_content_sec1{background-color: aliceblue;}
+#section_content_nav1{background-color: aliceblue;}
+#section_content_sec2{background-color: aliceblue;}
+#section_content_nav2{background-color: aliceblue;}
+#section_content_sec3{background-color: aliceblue;}
+#section_content_nav3{background-color: aliceblue;}
 
 /* foooter */
 footer {height:150px; background-color: lavenderblush;}
