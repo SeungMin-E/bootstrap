@@ -27,6 +27,36 @@ section {height: 800px; overflow: auto; position: relative;}
 #section_content_sec3{background-color: aliceblue;}
 #section_content_nav3{background-color: aliceblue;}
 
+
+/* 리뷰 집계 박스 */
+#re_box{
+    height: 270px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+/* 리뷰 세로 그래프 바 */
+.vertical_bar{
+    width: 20px;
+    height: 180px;
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.vertical_bar_fill{
+    width: 20px;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
+
+/* 좌측 팝업 리모콘 */
 #popup_remote{width: 150px; height: 380px; box-sizing: border-box; position: absolute; left: 85px; bottom: 100px;}
 
 /* foooter */
