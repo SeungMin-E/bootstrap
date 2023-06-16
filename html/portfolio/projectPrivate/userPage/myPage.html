@@ -77,93 +77,44 @@
     </header>
     <section>
         <div class="wrap_container">
-            <div id="notice_head" class="d-flex flex-row justify-content-between mt-1 mb-1">
-                <div class="d-flex flex-row justify-content-evenly col-3">
-                    <i class="fa-solid fa-exclamation" style="font-size: 40px;"></i>
-                    <h1>공지사항</h1>
-                    <i class="fa-solid fa-exclamation" style="font-size: 40px;"></i>
-                </div>
-                <!-- 검색 박스 -->
-                <div class="align-self-center" style="width: 300px;">
-                        <form class="d-flex col-auto" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-                        </form>
-                </div>
+            <div class="d-flex flex-row justify-content-center mt-5">
+                <i class="fa-sharp fa-solid fa-book align-self-center" style="font-size: 135px; color: rgb(206, 179, 26);"></i>
+                <h1 class="align-self-center">&nbsp;&nbsp;&nbsp;&nbsp;마이페이지</h1>
             </div>
-           <!-- 공지사항 게시판 (일단 틀을 잡고 DB잡으면 DB로 채워진다.) -->
-           <table class="table"> 
-                <thead>
-                    <tr>
-                        <th>번호</th>
-                        <th>관련 부서</th>
-                        <th>공지 제목</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>관리자</td>
-                        <td>공지사항 게시판입니다.</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>마케팅</td>
-                        <td>오픈 이벤트 공지 안내</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>관리자</td>
-                        <td>공지사항 테스트 1</td>
-                    </tr>
-            
-                </tbody>
-           </table>
-           <!-- 페이지 박스 -->
-           <div class="d-flex justify-content-center">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
-                        </a>
-                    </li>
-                    </ul>
-                </nav>
-           </div>
-        </div>
-        <div id="popup_remote">
-            <div>
-                <button type="button" class="btn btn-outline-primary" style="width :150px; height: 100px;">
-                    <i class="fa-regular fa-comment-dots fa-2xl"></i>
-                   문의하기
-                </button>
-            </div>
-            <div>
-                <button type="button" class="btn btn-outline-success" style="width :150px; height: 100px;">
-                    <i class="fa-solid fa-truck fa-2xl"></i>
-                    배송현황
-                </button>
-            </div>
-            <div>
-                <button type="button" class="btn btn-outline-info" style="width :150px; height: 100px;">
-                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>
-                    장바구니
-                </button>
-            </div>
-            <div>
-                <button type="button" class="btn btn-primary" style="width :150px">TOP</button>
-            </div>
-            <div>
-                <button type="button" class="btn btn-secondary" style="width :150px">BOTTOM</button>
+            <div class="d-flex justify-content-center mt-5">
+                <form>
+                    <!-- 인적사항 내용 창 -->
+                    <div class="d-flex flex-column">
+                        <div class="col-auto mb-3" style="width: 500px;">
+                            <span>이름 : </span>
+                            <span>@@@</span>
+                        </div>
+                        <div class="col-auto mb-3" style="width: 500px;">
+                            <span>성별 : </span>
+                            <span>비공개</span>
+                        </div>
+                        <div class="col-auto mb-3" style="width: 500px;">
+                            <span>이메일 : </span>
+                            <span>Loremipsum@dolorsit.com</span>
+                        </div>
+                        <div class="col-auto mb-3" style="width: 500px;">
+                            <span>우편번호 : </span>
+                            <span>11010</span>
+                        </div>
+                        <div class="col-auto mb-3" style="width: 500px;">
+                            <span>주소 : </span>
+                            <span>@@시 !@#구 ##동 @!#$%%</span>
+                        </div>
+                    </div>
+                        
+                    <!-- 변경 툴 -->
+                    <div class="d-grid gap-2 col-10 mx-auto">
+                        <button class="btn btn-primary" type="button">인적사항 변경하기</button>
+                        <button class="btn btn-primary" type="button">비밀번호 변경</button>
+                        <button class="btn btn-primary" type="button">회원 탈퇴</button>
+                      </div>
+                    <!-- 오븐 확인하고 빠진거나 부족한거 수정 예정 -->
+                </form>
             </div>
         </div>
     </section>

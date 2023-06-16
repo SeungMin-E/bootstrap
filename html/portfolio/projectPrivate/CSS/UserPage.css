@@ -56,6 +56,10 @@ section {height: 800px; overflow: auto; position: relative;}
     background-color: cornflowerblue;
 }
 
+/* 공지사항 CSS & QnA */
+#notice_head{height: 95px; box-sizing: border-box; padding: 20px;}
+#notice_head h1{margin: 0;}
+
 /* 좌측 팝업 리모콘 */
 #popup_remote{width: 150px; height: 380px; box-sizing: border-box; position: absolute; left: 85px; bottom: 100px;}
 
