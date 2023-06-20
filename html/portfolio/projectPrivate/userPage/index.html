@@ -22,16 +22,16 @@
                             <a href="#" class="nav-link">회원가입</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">로그인</a>
+                            <a href="loginPage.html" class="nav-link">로그인</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">마이페이지</a>
+                            <a href="myPage.html" class="nav-link">마이페이지</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">장바구니</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">고객센터</a>
+                            <a href="QandA.html" class="nav-link">고객센터</a>
                         </li>
                     </ul>
                 </div>
@@ -50,7 +50,7 @@
                <div class="">
                    <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link">공지사항</a>
+                            <a href="notice.html" class="nav-link">공지사항</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">베스트셀러</a>
@@ -68,7 +68,7 @@
                             <a class="nav-link">이벤트</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Q&A/1:1문의</a>
+                            <a href="QandA.html" class="nav-link">Q&A/1:1문의</a>
                         </li>
                     </ul>
                 </div> 
@@ -335,7 +335,7 @@
         </div>
         <div id="popup_remote">
             <div>
-                <button type="button" class="btn btn-outline-primary" style="width :150px; height: 100px;">
+                <button type="button" class="btn btn-outline-primary" onclick="location.href='QandA.html'" style="width :150px; height: 100px;">
                     <i class="fa-regular fa-comment-dots fa-2xl"></i>
                    문의하기
                 </button>
@@ -352,11 +352,9 @@
                     장바구니
                 </button>
             </div>
-            <div>
-                <button type="button" class="btn btn-primary" style="width :150px">TOP</button>
-            </div>
-            <div>
-                <button type="button" class="btn btn-secondary" style="width :150px">BOTTOM</button>
+            <div >
+                <button type="button" class="btn btn-primary" onclick="window.scrollTo(0,0)" style="width :150px">TOP</button>
+                <button type="button" class="btn btn-secondary" onclick="window.scrollTo(0,document.body.scrollHeight)" style="width :150px">BOTTOM</button>
             </div>
         </div>
     </section>
